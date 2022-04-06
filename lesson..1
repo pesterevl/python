@@ -1,0 +1,83 @@
+                          # задание 1
+gr = 123
+po = 321
+sd = ('vasa')
+if sd == 'vas':
+    print(po)
+else:
+    print(gr)
+f = 16
+s = 3
+top = s * f
+print(top)
+print(f // s)
+print(f % s)
+tame = input('enter tame:')
+min = input('enter min:')
+tame = int(tame)
+min = int(min)
+if (tame == 10):
+    print(tame * min)
+else:
+    print(tame + min)
+                              # задание 2
+sec = input('enter sec:')
+sec = int(sec)
+#print(sec // 3600)
+hour =(sec // 3600)
+#print(sec % 3600)
+min1 = ((sec % 3600) // 60)
+#print(min1)
+sec1 = ((sec % 3600) % 60)
+#print(sec1)
+#print('hour:',hour,'min1:',min1,'sec1:',sec1)
+print(hour,':', min1,':',sec1)
+                                     # задание 3
+n = input('enter n:')
+p = n + n
+f = n + n + n
+n = int(n)
+p = int(p)
+f = int(f)
+print(n + p + f)
+                                      #задание 4
+a = input()
+a = int(a)            # 726
+m = a % 10             # 6
+a = a // 10             # 72
+while a > 0:            # да         7 d
+    if a % 10 > m:       # 2 > 6 n    7 > 6 d
+        m = a % 10        # -          m = 7
+    a = a // 10          #7
+print(m)
+
+                                           #задание 5
+rev = input('enter revenue:')
+cos = input('enter costs:')
+rev = int(rev)
+cos = int(cos)
+itog = (rev - cos)
+if (itog > 0):
+    print('В компании Прибыль')
+    rev = float(rev)                       # задание 6
+    ren = (rev / cos)
+    print('Рентабельность =',ren)
+    staff = input('enter the number of employees:')
+    staff = int(staff)
+    itog2 = (itog / staff)
+    print('Прибыль на одного сотрудника =',itog2)
+else:
+    print('В компании Убытки')
+                                             # задание 7
+
+a = input('enter a')
+b = input('enter b')
+a = int(a)
+b = int(b)
+day = 0
+while b - a >= 0:
+    a *= 1.1
+    day += 1
+print(day)
+
+
