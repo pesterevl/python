@@ -1,0 +1,65 @@
+                                                      # Задание 1
+def mi_f(a_2,a_1):
+    if a_2 ==0:
+       print('На ноль делить нельзя')
+    else:
+        return a_1 // a_2
+print((mi_f(a_1=int(input('Введите число')),a_2=int(input('Введите число')))))
+
+                                                      # Задание 2
+def info(name,familia,god ,city):
+    return f' {name}, {familia},{god},{city},'
+
+print(info(name=input('name:'),familia=input('familia: '),god=input('god:'),city=input('city: ')))
+
+                                                      # Задание 3
+def my_func(a_1,a_2,a_3):
+       li = [a_1,a_2,a_3]
+       try:
+           li.remove(min(li))
+           return sum(li)
+       except TypeError:
+           return 'Введены не числа'
+
+print(my_func(4,5,6))
+
+                                                    # Задание 4.1
+
+def my_funx(x,y):
+    try:
+       a = x ** y
+       return a
+    except TypeError:
+        return 'Не тот тип данны'
+print(my_funx(4,-2))
+                                                # 4.2 Не понял как сделать(прошу разобрать еще раз на уроке)
+                                                # Задание 5
+
+def summ():
+    res = 0
+    while True:
+        li = input('Введите числа через пробел, для выхда-stop').split()
+        for num in li:
+            if num.lower() == 'stop':
+                return res
+            else:
+                try:
+                    res = res + int(num)
+                except ValueError:
+                    print('Для выхода-stop')
+        print('summa =',res)
+print(summ())
+                                                     #  Задание 6-7
+
+def int_func():
+    li = input('ВВедите слова через пробел: ').split()
+    for word in li:
+        lenn = 0
+        for ch in word:
+            if 97<= ord(ch) <=122:
+                lenn = lenn + 1
+        if lenn == len(word):
+            print(word.title())
+        else:
+            print(f'ошибка: {word} допустим только нижний регистр')
+int_func()
