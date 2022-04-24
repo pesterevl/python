@@ -1,0 +1,70 @@
+
+                                # Задание 1 Не совсем понял как передаются данные в этом примере.
+from sys import argv
+
+def zp():
+    try:
+        # virabotka = float(argv[1])
+        # stavka = float(argv[2])
+        # premia = float(argv[3])
+        path,virabotka,stavka,premia = argv
+        virabotka,stavka,premia = map(float,argv[1:])
+        print('заработная плата:', virabotka * stavka + premia)
+    except ValueError:
+        print('запустите скрипт с тремя параметрами: выработка,ставка,премия')
+
+zp()
+                                                          # Задание 2
+
+li = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+new = [li[i]for i in range(1, len(li)) if li[i] > li[i-1]]
+print(new)
+                                                             #Задание 3
+
+tu = [i for i in range(20,241) if i % 20 == 0 or i % 21 == 0]
+print(tu)
+                                                   # Задание 4
+
+li = [2, 2, 2, 7, 23, 1, 44, 44, 3, 2, 10, 7, 4, 11]
+new = [i for i in li if li.count(i) == 1]
+print(new)
+                                                    # Задание 5
+
+from functools import reduce
+li = [i for i in range(100,1002) if i % 2 == 0]
+print(li)
+result = reduce(lambda a, b: a * b, li)
+print(result)
+                                                     # Задание 6.1
+
+
+from itertools import count
+
+st = int(input('Введите начальное число:'))
+end = int(input('Введите конечное число:'))
+for i in count(st):
+    print(i)
+    if i == end:
+        break
+ # 6.2 Не совсем понял задание сделал как разбирали  Помоему работает не корректно
+from itertools import cycle
+li = input('Введите список через пробел:').split()
+
+for el in cycle(li):
+    stop = input('Продолжаем дальше? Для выхода напишите "нет" ')
+    if stop.title() == 'нет':
+        break
+    print(el)
+                                                  # Задание 7
+
+def fact(b):
+    res = 1
+    if b == 0:
+        yield f'{b}! = 1'
+    for i in range(1, b + 1):
+        res *= i
+        yield f'{i}! = {res}'
+
+n = int(input('Введите число,максимальный факториал которого хотите получить:'))
+for el in fact(n):
+    print(el)
